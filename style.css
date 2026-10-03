@@ -6,3 +6,13 @@
   --text: #ece9f6;
   --muted: #a9a8c4;
 }
+
+* { box-sizing: border-box; margin: 0; }
+html { scroll-behavior: smooth; }
+ 
+body {
+  background: var(--navy);
+  color: var(--text);
+  font-family: "DM Sans", sans-serif;
+  line-height: 1.65;
+}

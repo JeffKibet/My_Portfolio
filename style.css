@@ -117,3 +117,9 @@ main, footer { position: relative; z-index: 1; }
  
 footer { text-align: center; padding: 2rem; color: var(--muted); font-size: 0.9rem; }
  
+@media (max-width: 760px) {
+  .hero, .split { grid-template-columns: 1fr; }
+  .photo-frame { max-width: 320px; }
+  .nav nav { gap: 0.8rem; }
+  .nav nav a { font-size: 0.85rem; }
+}

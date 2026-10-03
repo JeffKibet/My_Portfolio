@@ -123,3 +123,8 @@ footer { text-align: center; padding: 2rem; color: var(--muted); font-size: 0.9r
   .nav nav { gap: 0.8rem; }
   .nav nav a { font-size: 0.85rem; }
 }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition: none !important; }
+}

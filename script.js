@@ -1,12 +1,8 @@
-// 3D background: a network of glowing nodes (neurons / circuit points)
-// with signals travelling along the connections.
-
 const canvas = document.getElementById("scene");
 const reduceMotion = window.matchMedia(
   "(prefers-reduced-motion: reduce)",
 ).matches;
 
-// Basic Three.js setup
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(
   60,
@@ -24,12 +20,10 @@ const renderer = new THREE.WebGLRenderer({
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 renderer.setSize(window.innerWidth, window.innerHeight);
 
-// Fewer nodes on phones so it stays smooth
 const NODE_COUNT = window.innerWidth < 700 ? 60 : 110;
 const group = new THREE.Group();
 scene.add(group);
 
-// 1. Create nodes at random positions
 const nodes = [];
 for (let i = 0; i < NODE_COUNT; i++) {
   nodes.push(
@@ -54,7 +48,6 @@ group.add(
   ),
 );
 
-// 2. Connect nodes that are close together
 const edges = [];
 const linePoints = [];
 for (let i = 0; i < nodes.length; i++) {
@@ -77,7 +70,6 @@ group.add(
   ),
 );
 
-// 3. Signals: small glowing dots that travel along random connections
 const signals = [];
 const signalGeometry = new THREE.SphereGeometry(0.11, 12, 12);
 const signalMaterial = new THREE.MeshBasicMaterial({ color: 0xffffff });
@@ -95,11 +87,10 @@ for (let i = 0; i < 14; i++) {
   signals.push(signal);
 }
 
-// Mouse, scroll and hover inputs
 let mouseX = 0;
 let mouseY = 0;
 let scrollAmount = 0;
-let energy = 0; // goes up when a project card is hovered
+let energy = 0; 
 let energyTarget = 0;
 
 window.addEventListener("mousemove", function (e) {
@@ -127,32 +118,26 @@ window.addEventListener("resize", function () {
   renderer.setSize(window.innerWidth, window.innerHeight);
 });
 
-// The animation loop runs about 60 times per second
 const clock = new THREE.Clock();
 
 function animate() {
   requestAnimationFrame(animate);
   const time = clock.getElapsedTime();
 
-  // Smoothly move toward the hover energy level
   energy += (energyTarget - energy) * 0.06;
 
-  // Slow drift, plus the scroll turns the whole network
   const speed = reduceMotion ? 0 : 1;
   group.rotation.y = time * 0.05 * speed + scrollAmount * Math.PI * 1.2;
   group.rotation.x = scrollAmount * 0.5;
 
-  // The camera leans toward the mouse
   camera.position.x += (mouseX * 1.5 - camera.position.x) * 0.04;
   camera.position.y += (-mouseY * 1.0 - camera.position.y) * 0.04;
   camera.lookAt(0, 0, 0);
 
-  // Nodes "breathe", and glow stronger when a card is hovered
   pointsMaterial.size = 0.16 + Math.sin(time * 2) * 0.03 + energy * 0.1;
   lineMaterial.opacity = 0.3 + energy * 0.4;
   lineMaterial.color.set(energy > 0.5 ? 0xe8c872 : 0x8b6cff);
 
-  // Move the signals along their connections (faster when energised)
   signals.forEach(function (s) {
     s.progress += (0.008 + energy * 0.02) * speed;
     if (s.progress >= 1) pickEdge(s);

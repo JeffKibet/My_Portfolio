@@ -1,106 +1,148 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Jeff Kibet | Psychologist · Engineer</title>
-  <meta name="description" content="Jeff Kibet is a counselling psychologist and software engineer building mental-health technology.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <!-- The 3D scene sits behind everything -->
-  <canvas id="scene" aria-hidden="true"></canvas>
- 
-  <header class="nav">
-    <a href="#home" class="logo">Jeff Kibet</a>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#documents">CV</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Jeff Kibet | Psychologist · Engineer</title>
+    <meta
+      name="description"
+      content="Jeff Kibet is a counselling psychologist and software engineer building mental-health technology."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=DM+Sans:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- The 3D scene sits behind everything -->
+    <canvas id="scene" aria-hidden="true"></canvas>
 
-  <main>
-    <!-- HERO -->
-    <section id="home" class="hero">
-      <div class="hero-text">
-        <p class="descriptor">Psychologist · Engineer</p>
-        <h1>I build software that helps people feel understood.</h1>
-        <p class="lead">Counselling psychologist turned software engineer, creating mental-health technology from Nairobi.</p>
-        <div class="buttons">
-          <a class="btn primary" href="#projects">See my projects</a>
-          <a class="btn" href="#documents">Download my CV</a>
+    <header class="nav">
+      <a href="#home" class="logo">Jeff Kibet</a>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#documents">CV</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- HERO -->
+      <section id="home" class="hero">
+        <div class="hero-text">
+          <p class="descriptor">Psychologist · Engineer</p>
+          <h1>I build software that helps people feel understood.</h1>
+          <p class="lead">
+            Counselling psychologist turned software engineer, creating
+            mental-health technology from Nairobi.
+          </p>
+          <div class="buttons">
+            <a class="btn primary" href="#projects">See my projects</a>
+            <a class="btn" href="#documents">Download my CV</a>
+          </div>
         </div>
-      </div>
-      <div class="photo-frame">
-        <!-- Swap this file to change the photo -->
-        <img src="./images/hero.p.jpg" alt="Jeff Kibet" onerror="this.style.display='none'">
-      </div>
-    </section>
- 
-    <!-- ABOUT -->
-    <section id="about" class="panel split">
-      <div class="photo-frame small">
-        <img src="images/pt.jpg" alt="Jeff seated in natural light" onerror="this.style.display='none'">
-      </div>
-      <div>
-        <h2>About me</h2>
-        <p>I started in counselling psychology, working with assessment, CBT, trauma and crisis support, and workplace mental health. Now I'm training as a software engineer at Moringa School.</p>
-        <p>The two fields meet in one question: how can technology support someone on a hard day? That's what I build toward.</p>
-      </div>
-    </section>
+        <div class="photo-frame">
+          <!-- Swap this file to change the photo -->
+          <img
+            src="./images/hero.p.jpg"
+            alt="Jeff Kibet"
+            onerror="this.style.display = 'none'"
+          />
+        </div>
+      </section>
 
-     <!-- PROJECTS -->
-    <section id="projects" class="panel">
-      <h2>Projects</h2>
-      <div class="photo-frame wide">
-        <img src="./images/Orbital Gold and Glass Network.png" alt="Jeff working at his laptop" onerror="this.style.display='none'">
-      </div>
-      <div class="cards">
-        <article class="card" data-energy>
-          <h3>Menda</h3>
-          <p>A mental wellness web app guided by CBT, designed for the Kenyan market.</p>
-        </article>
-        <article class="card" data-energy>
-          <h3>Inventory Management API</h3>
-          <p>A Flask REST API with OpenFoodFacts integration, a command-line tool and pytest tests.</p>
-        </article>
-      </div>
-    </section>
- 
-    <!-- CV AND COVER LETTER -->
-    <section id="documents" class="panel">
-      <h2>CV and cover letter</h2>
-      <p>Download both as PDF.</p>
-      <div class="buttons">
-        <a class="btn primary" href="./files/Jeff_Kibet_CV.pdf" download>Download CV</a>
-        <a class="btn" href="./files/Jeff_Kibet_Cover_Letter.pdf" download>Download cover letter</a>
-      </div>
-    </section>
+      <!-- ABOUT -->
+      <section id="about" class="panel split">
+        <div class="photo-frame small">
+          <img
+            src="images/pt.jpg"
+            alt="Jeff seated in natural light"
+            onerror="this.style.display = 'none'"
+          />
+        </div>
+        <div>
+          <h2>About me</h2>
+          <p>
+            I started in counselling psychology, working with assessment, CBT,
+            trauma and crisis support, and workplace mental health. Now I'm
+            training as a software engineer at Moringa School.
+          </p>
+          <p>
+            The two fields meet in one question: how can technology support
+            someone on a hard day? That's what I build toward.
+          </p>
+        </div>
+      </section>
 
-    <!-- CONTACT / SOCIALS -->
-    <section id="contact" class="panel">
-      <h2>Let's talk</h2>
-      <p>I'm open to work-from-home roles in software engineering and mental-health technology.</p>
-      <div class="buttons">
-        <!-- Replace each # with your real link -->
-        <a class="btn" href="https://github.com/JeffKibet">GitHub</a>
-        <a class="btn" href="https://www.linkedin.com/in/jeff-kibet-b5233242a?utm_source=share_via&utm_content=profile&utm_medium=member_android">LinkedIn</a>
-        <a class="btn" href="#">Instagram</a>
-        <a class="btn" href="jefferykibet@gmail.com">Email</a>
-      </div>
-    </section>
-  </main>
- 
-  <footer>© 2026 Jeff Kibet</footer>
- 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-  <script src="script.js"></script>
-</body>
+      <!-- PROJECTS -->
+      <section id="projects" class="panel">
+        <h2>Projects</h2>
+        <div class="photo-frame wide">
+          <img
+            src="./images/Orbital Gold and Glass Network.png"
+            alt="Jeff working at his laptop"
+            onerror="this.style.display = 'none'"
+          />
+        </div>
+        <div class="cards">
+          <article class="card" data-energy>
+            <h3>Menda</h3>
+            <p>
+              A mental wellness web app guided by CBT, designed for the Kenyan
+              market.
+            </p>
+          </article>
+          <article class="card" data-energy>
+            <h3>Inventory Management API</h3>
+            <p>
+              A Flask REST API with OpenFoodFacts integration, a command-line
+              tool and pytest tests.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- CV AND COVER LETTER -->
+      <section id="documents" class="panel">
+        <h2>CV and cover letter</h2>
+        <p>Download both as PDF.</p>
+        <div class="buttons">
+          <a class="btn primary" href="./files/Jeff_Kibet_CV.pdf" download
+            >Download CV</a
+          >
+          <a class="btn" href="./files/Jeff_Kibet_Cover_Letter.pdf" download
+            >Download cover letter</a
+          >
+        </div>
+      </section>
+
+      <!-- CONTACT / SOCIALS -->
+      <section id="contact" class="panel">
+        <h2>Let's talk</h2>
+        <p>
+          I'm open to work-from-home roles in software engineering and
+          mental-health technology.
+        </p>
+        <div class="buttons">
+          <a class="btn" href="https://github.com/JeffKibet">GitHub</a>
+          <a
+            class="btn"
+            href="https://www.linkedin.com/in/jeff-kibet-b5233242a?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+            >LinkedIn</a
+          >
+          <a class="btn" href="">Instagram</a>
+          <a class="btn" href="mailto:jefferykibet@gmail.com">Email</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>© 2026 Jeff Kibet</footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="script.js"></script>
+  </body>
 </html>
- 
- 
